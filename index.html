@@ -10,27 +10,29 @@
 	<body>
 		<!-- inicio de header -->
 		<header>
-			<nav class="myNavbar navbar">
-				<div class="brand-conteiner">
-					<a href="index.html">
-						<img src="http:/lorempixel.com/200/60" alt="proyect logo">
-					</a>
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-navbar-collapse" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
+			<div class="myNavbar navbar navbar-default" ng-controller="NavBarCtrl">
+				<div class="conteiner-fluid">
+					<div class="nav-header">
+						<button type="button" class="navbar-toggle collapsed navbar-brand" data-toggle="collapse" data-target="#my-navbar-collapse" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="myBrand" href="index.html">
+							<img src="http:/lorempixel.com/200/60" alt="proyect logo">
+						</a>
+					</div>
+					<div class="collapse navbar-collapse" id="my-navbar-collapse">
+						<ul class="myNav myNav-collapse">
+							<li class="opcion1"><a href="#">opcion1</a></li>
+							<li class="opcion2"><a href="#">opcion2</a></li>
+							<li class="opcion3"><a href="#">opcion3</a></li>
+							<li class="opcion4"><a href="#">opcion4</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="collapse navbar-collapse" id="my-navbar-collapse">
-					<ul class="myNav myNav-collapse">
-						<li class="opcion1"><a href="#">opcion1</a></li>
-						<li class="opcion2"><a href="#">opcion2</a></li>
-						<li class="opcion3"><a href="#">opcion3</a></li>
-						<li class="opcion4"><a href="#">opcion4</a></li>
-					</ul>
-				</div>
-			</nav>
+			</div>
 		</header>
 		<!-- inicio de portada -->
 		<section class="main">
