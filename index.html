@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Document</title>
-</head>
-<body>
-	<header class="row">
-		<nav class="navbar">
-			<div class="conteiner-fluid">
-				<div class="navbar-header">
-					<a href="index.html" class="navbar-brand"><img src="http:/lorempixel.com/200/60" class="img-responsive" alt=""></a>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Proyecto integrador</title>
+	</head>
+	<body>
+		<!-- inicio de header -->
+		<header>
+			<nav class="myNavbar navbar">
+				<div class="brand-conteiner">
+					<a href="index.html">
+						<img src="http:/lorempixel.com/200/60" alt="proyect logo">
+					</a>
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-navbar-collapse" aria-expanded="false">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
@@ -21,72 +23,46 @@
 					</button>
 				</div>
 				<div class="collapse navbar-collapse" id="my-navbar-collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">opcion 1</a></li>
-						<li><a href="#">opcion 2</a></li>
-						<li><a href="#">opcion 3</a></li>
-						<li><a href="#">opcion 4</a></li>
+					<ul class="myNav myNav-collapse">
+						<li class="opcion1"><a href="#">opcion1</a></li>
+						<li class="opcion2"><a href="#">opcion2</a></li>
+						<li class="opcion3"><a href="#">opcion3</a></li>
+						<li class="opcion4"><a href="#">opcion4</a></li>
 					</ul>
 				</div>
-			</div>
-		</nav>
-	</header>
-	<!-- inicio de portada / busqueda -->
-	<section class="wrap">
+			</nav>
+		</header>
+		<!-- inicio de portada -->
 		<section class="main">
-			<div class="container">
+			<div class="buscador">
 				<div>
 					<h1>Buscar propiedades</h1>
 				</div>
-				<div class="row">
-					<section class="conteiner">
-						<div class="center">
-							<form action=""class="form-horizontal">
-								<input type="text">
-								<button>Buscar</button>
-							</form>
-						</div>
-					</section>
+				<div>
+					<form action="">
+						<!-- <label for="">Buscar propiedades</label> -->
+						<input type="text">
+						<button>Buscar</button>
+					</form>
 				</div>
 			</div>
 		</section>
-	</section>
-	<!-- inicio de destacados -->
-	<section class="wrap">
-		<section class="main">
-			<div class="conteiner">
-				<div class="row destacados">
-					<article class="col-md-4">
-						<h2>Sub title</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quo tenetur porro pariatur sit possimus impedit nisi, iusto, reprehenderit illum laborum magnam sapiente, cupiditate et reiciendis. Perspiciatis repellat, eum facere.</p>
-					</article>
-					<article class="col-md-4">
-						<h2>Sub title</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit officia dolore tenetur qui? Magnam earum sit nostrum assumenda fugiat vero labore et, odio animi, vel consectetur dicta repellat soluta nulla!</p>
-					</article>
-					<article class="col-md-4">
-						<h2>Sub title</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas optio ipsam incidunt, adipisci asperiores nam sequi vero itaque quo at. Perferendis nulla atque cupiditate ut cumque pariatur aspernatur, accusamus quos.</p>
-					</article>
-				</div>
-			</div>
+		<!-- inicio de destacados -->
+		<section class="destacados">
+			<article class="col-xs-12 col-sm-4"><h2>Subtitulo</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore obcaecati minus adipisci blanditiis enim velit ex possimus modi sed tempore voluptatem iusto assumenda facere, accusamus? Culpa eaque rem aliquid sit.</p></article>
+			<article class="col-xs-12 col-sm-4"><h2>Subtitulo</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa repellat accusantium, sed ullam amet odio vel facere assumenda, atque est. Quam, labore aliquid molestiae vitae, quisquam ipsa repudiandae illum tempora.</p></article>
+			<article class="col-xs-12 col-sm-4"><h2>Subtitulo</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur nemo, nulla ab obcaecati est impedit voluptatibus fuga consequatur ratione necessitatibus accusantium praesentium. Minus assumenda asperiores atque ducimus distinctio obcaecati omnis.</p></article>
 		</section>
-	</section>
-	<footer class="row">
-		<nav class="navbar">
-			<div class="navbar-footer">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">opcion 1</a></li>
-					<li><a href="#">opcion 2</a></li>
-					<li><a href="#">opcion 3</a></li>
-				</ul>
-			</div>
-		</nav>
-	</footer>
-	
-
-	<!-- inicio scripts -->
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-</body>
+		<!-- inicio footer -->
+		<footer class="flex">
+			<ul class="navbar myNav footer-nav">
+				<li class="opcion1">opcion1</li>
+				<li class="opcion2">opcion2</li>
+				<li class="opcion3">opcion3</li>
+			</ul>
+		</footer>
+		<!-- inicio scripts -->
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
 </html>
