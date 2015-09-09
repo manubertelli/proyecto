@@ -1,0 +1,22 @@
+/*seccion footer*/
+.footer-nav{
+	background: #353535;
+	display: flex;
+	justify-content:flex-end;
+	padding: 0 15px;
+}
+.footer-nav ul{
+	padding-right: 1em;
+}
+.footer-nav li{
+	color: #fff;
+	display: block;
+	margin: 1em;
+	padding: 1em 0 1em 0;
+	text-align: center; 
+	text-decoration: none;
+}
+.footer-nav li:hover {
+	color: #c1c1c1;
+	text-decoration: underline;
+}

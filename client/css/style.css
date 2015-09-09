@@ -1,0 +1,153 @@
+
+/*navegador*/
+.brand-conteiner {
+	padding: 1em;
+}
+
+/*menu sin colapsar*/
+@media (min-width: 768px){
+	.myBrand{
+		display: block;
+		float: left;
+		padding: 1em;
+	}
+	.myNavbar {
+		background: #353535;
+		list-style: none;
+	}
+	.myNavbar ul{
+		background: #353535;
+		display: flex;
+		float: right;
+		justify-content: center;
+		list-style: none;
+		margin: 40px 0 0;
+		padding:0px;
+	}
+	.myNavbar a{
+		color: #fff;
+		display: block;
+		padding: 0;
+		text-decoration: none;
+	    margin: 1em;
+	}
+	.myNavbar a:hover {
+		color: #c1c1c1;
+		text-decoration: underline;
+	}
+	.navbar {
+	    border-radius: 0;
+	}	
+}
+
+/*menu colapsado*/
+@media (max-width: 767px){
+	.myNavbar {
+		background: #353535;
+		list-style: none;
+		margin: 0;
+	    padding: 0;
+	}
+	.myNavbar ul{
+		list-style: none;
+		padding-left: 0;
+		padding-top: 10px;
+	}
+	.myNavbar a{
+		color: #fff;
+		display: block;
+		padding: 1em 0 1em 0;
+		text-align: center; 
+		text-decoration: none;
+	}
+	.navbar-toggle{
+		margin: 0;
+	}
+	.navbar-default .navbar-toggle .icon-bar{
+		background-color: #fff;
+		height: 4px;
+		margin: 5px 0;
+		width: 40px;
+	}
+	.myNav-collapse {
+		font-size: 1.3em;
+		margin-top: 0;
+		position: relative;
+	}
+	.navbar-default .navbar-toggle {
+	    border:none;
+	    padding-top: 30px;
+	}
+	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+	    background: transparent;
+	}
+}
+
+
+/*seccion portada*/
+.main{
+	display: flex;
+	justify-content: center;
+}
+
+.buscador{
+	text-align: center;
+}
+
+/*seccion destacados*/
+.destacados{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+
+
+/*flitros*/
+.filtros{
+	align-items:center;
+	border: solid 1px #000;
+	display: flex;
+	justify-content:flex-end;
+	margin-bottom: 10px; 
+	max-width: 800px;
+	padding: 0 15px;
+}
+.filtros ul{
+	margin:0px;
+}
+.filtros li{
+	display: inline-block;
+	padding: 1em 0 1em 0;
+	text-align: center; 
+	text-decoration: none;
+}
+
+/*seccion resultados*/
+.resultados{
+	align-items:center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+.resultados article{
+	align-self: auto;
+	border: solid 1px #000;
+	display: flex;
+	max-width: 800px;
+	margin-bottom: 10px;
+	padding: 10px;
+	justify-content:space-between;
+}
+.articulo{
+	width: 400px;
+}
+.articulo h2{
+	padding: 0px;
+	margin: 0px;
+}
+.resultados button{
+	height: 40px;
+}
+

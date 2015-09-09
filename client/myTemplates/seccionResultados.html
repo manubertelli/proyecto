@@ -1,0 +1,15 @@
+<section class="resultados">
+	<div class="filtros col-xs-12">
+		<ul>
+			<li>Filtro 1</li>
+			<li>Filtro 2</li>
+		</ul>
+	</div>
+	<article ng-repeat="item in resultados" class="col-xs-12">
+		<img src="{{item.thumbnail}}" alt="foto de la busqueda">
+		<div class="articulo">
+			<h2>{{item.title}}</h2><p>{{item.permalink}}</p>
+		</div>
+		<button>Ver mas +</button>
+	</article>
+</section>
