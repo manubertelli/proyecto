@@ -2,9 +2,9 @@
 ~~*ERROR  al utilizar el módulo requst*~~
 
 
-~~Hola Marcelo, te cuento que estoy tratando hacer la tarea y la verdad que cuando intento utilizar el modulo request me tira este error:
+~~Hola Marcelo, te cuento que estoy tratando hacer la tarea y la verdad que cuando intento utilizar el modulo request me tira este error:~~
 
-'module.js:338
+~~'module.js:338
     throw err;
           ^
 Error: Cannot find module 'request'
