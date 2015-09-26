@@ -1,0 +1,14 @@
+<section class="misPublicaciones">
+	<h1>Mis publicaciones</h1>
+	<article ng-repeat="item in resultados" class="col-xs-12">
+		<img src="{{item.thumbnail}}" alt="foto de la busqueda">
+		<div class="publicacion">
+			<h2>{{item.title}}</h2><p>{{item.permalink}}</p>
+		</div>
+		<div class="buttons">
+			<button>Ver</button>
+			<button>Modificar</button>
+			<button>Eliminar</button>
+		</div>
+	</article>
+</section>

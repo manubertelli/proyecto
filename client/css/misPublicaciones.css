@@ -1,0 +1,37 @@
+
+
+/*seccion resultados*/
+.misPublicaciones{
+	align-items:center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+.misPublicaciones article{
+	align-self: auto;
+	border: solid 1px #000;
+	display: flex;
+	max-width: 800px;
+	margin-bottom: 10px;
+	padding: 10px;
+	justify-content:space-between;
+}
+.misPublicaciones button{
+	height: 40px;
+}
+.publicacion{
+	width: 400px;
+}
+.publicacion h2{
+	padding: 0px;
+	margin: 0px;
+}
+.buttons{
+	display: flex;
+	flex-direction: column;
+	/*justify-content: space-around;*/
+}
+.buttons button{
+	margin-bottom: 10px;
+}

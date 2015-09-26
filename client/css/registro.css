@@ -1,0 +1,23 @@
+/*seccion portada*/
+.main{
+	display: flex;
+	justify-content: center;
+}
+
+.registro{
+	text-align: center;
+	width: 400px;
+	margin: 10px;
+}
+
+/*seccion destacados*/
+.formulario form{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin-bottom: 10px;
+}
+
+.formulario form button{
+	margin-top: 10px;
+}

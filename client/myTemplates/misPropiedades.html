@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="../css/bootstrap.min.css">
 		<link rel="stylesheet" href="../css/home.css">
 		<link rel="stylesheet" href="../css/resultados.css">
+		<link rel="stylesheet" href="../css/misPublicaciones.css">
 		<link rel="stylesheet" href="../css/header.css">
 		<link rel="stylesheet" href="../css/footer.css">
 		<!-- bower -->
@@ -38,35 +39,19 @@
 				</div>
 			</div>
 		</header>
-		<section class="resultados">
-			<div class="filtros col-xs-12">
-				<ul>
-					<li>Filtro 1</li>
-					<li>Filtro 2</li>
-				</ul>
-			</div>
-			<article class="col-xs-12">
-				<img src="http://lorempixel.com/200/200" alt="">
-				<div class="articulo">
-					<h2>Subtitulo</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore obcaecati minus adipisci blanditiis enim velit ex possimus modi sed tempore voluptatem iusto assumenda facere, accusamus? Culpa eaque rem aliquid sit.</p>
+		<section class="misPublicaciones">
+			<h1>Mis publicaciones</h1>
+			<article ng-repeat="item in resultados" class="col-xs-12">
+				<img src="http://lorempixel.com/200/200" alt="foto de la busqueda">
+				<div class="publicacion">
+					<h2>{{item.title}}</h2><p>{{item.permalink}}</p>
 				</div>
-				<button>Ver mas +</button>
-			</article>
-			<article class="col-xs-12">
-				<img src="http://lorempixel.com/200/200" alt="">
-				<div class="articulo">
-					<h2>Subtitulo</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore obcaecati minus adipisci blanditiis enim velit ex possimus modi sed tempore voluptatem iusto assumenda facere, accusamus? Culpa eaque rem aliquid sit.</p>
+				<div class="buttons">
+					<button>Ver</button>
+					<button>Modificar</button>
+					<button>Eliminar</button>
 				</div>
-				<button>Ver mas +</button>
 			</article>
-			<article class="col-xs-12">
-				<img src="http://lorempixel.com/200/200" alt="">
-				<div class="articulo">
-					<h2>Subtitulo</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore obcaecati minus adipisci blanditiis enim velit ex possimus modi sed tempore voluptatem iusto assumenda facere, accusamus? Culpa eaque rem aliquid sit.</p>
-				</div>
-				<button>Ver mas +</button>
-			</article>
-			
 		</section>
 		<!-- inicio footer -->
 		<footer class="flex">

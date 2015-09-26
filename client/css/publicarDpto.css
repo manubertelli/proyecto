@@ -1,0 +1,17 @@
+.formulario {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.buscar{
+	margin-left: 18px;
+	padding: 1px 12px;
+}
+.agregar{
+	margin-left: 14px;
+	padding: 18px 12px;
+}
+.publicar{
+	margin: 10px 0px;
+	padding: 10px 50px;
+}

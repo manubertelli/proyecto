@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="stylesheet" href="../css/bootstrap.min.css">
 		<link rel="stylesheet" href="../css/home.css">
 		<link rel="stylesheet" href="../css/resultados.css">
+		<link rel="stylesheet" href="../css/publicarDpto.css">
+		<link rel="stylesheet" href="../css/detalleDpto.css">
 		<link rel="stylesheet" href="../css/header.css">
 		<link rel="stylesheet" href="../css/footer.css">
-		<!-- bower -->
-		<script src="bower_components/angular/angular.js"></script>
-		<title>Resultados de busqueda</title>
+		c
+		<title>Proyecto integrador</title>
 	</head>
 	<body>
+		<!-- inicio de header -->
 		<header>
 			<div class="myNavbar navbar navbar-default" ng-controller="NavBarCtrl">
 				<div class="conteiner-fluid">
@@ -38,36 +40,45 @@
 				</div>
 			</div>
 		</header>
-		<section class="resultados">
-			<div class="filtros col-xs-12">
-				<ul>
-					<li>Filtro 1</li>
-					<li>Filtro 2</li>
-				</ul>
+		<!-- inicio de portada -->
+		<section class="main">
+			<div class="">
+				<div>
+					<h1>Departamento super copado</h1>
+				</div>
+				<div class="detalle">
+					<div class="carrusel">
+						<img src="http://lorempixel.com/450/300" alt="" class="img-responsive">
+					</div>
+					<div class="formulario">
+						<form action="">
+							<div class="form-group col-xs-6">
+								<label for="desde">Desde</label>
+								<input type="date" class="form-control" placeholder="Desde">
+							</div>
+							<div class="form-group col-xs-6">
+								<label for="hasta">Hasta</label>
+								<input type="date" class="form-control" placeholder="Desde">
+							</div>
+							<button class="reservar">Reservar</button>
+							<div class="descripcion">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit nulla blanditiis fugiat omnis natus doloremque.</p>
+							</div>
+							<div class="usuario">
+								<img src="http://lorempixel.com/100/100" alt="">
+								<h2 class="nombre">Juan Perez</h2>
+							</div>
+
+						</form>
+					</div>
+					
+				</div>
+				<div class="mapa">
+					<img src="http://lorempixel.com/780/300" alt="" class="img-responsive">
+				</div>
 			</div>
-			<article class="col-xs-12">
-				<img src="http://lorempixel.com/200/200" alt="">
-				<div class="articulo">
-					<h2>Subtitulo</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore obcaecati minus adipisci blanditiis enim velit ex possimus modi sed tempore voluptatem iusto assumenda facere, accusamus? Culpa eaque rem aliquid sit.</p>
-				</div>
-				<button>Ver mas +</button>
-			</article>
-			<article class="col-xs-12">
-				<img src="http://lorempixel.com/200/200" alt="">
-				<div class="articulo">
-					<h2>Subtitulo</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore obcaecati minus adipisci blanditiis enim velit ex possimus modi sed tempore voluptatem iusto assumenda facere, accusamus? Culpa eaque rem aliquid sit.</p>
-				</div>
-				<button>Ver mas +</button>
-			</article>
-			<article class="col-xs-12">
-				<img src="http://lorempixel.com/200/200" alt="">
-				<div class="articulo">
-					<h2>Subtitulo</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore obcaecati minus adipisci blanditiis enim velit ex possimus modi sed tempore voluptatem iusto assumenda facere, accusamus? Culpa eaque rem aliquid sit.</p>
-				</div>
-				<button>Ver mas +</button>
-			</article>
-			
 		</section>
+		<!-- inicio de destacados -->
 		<!-- inicio footer -->
 		<footer class="flex">
 			<ul class="navbar myNav footer-nav">

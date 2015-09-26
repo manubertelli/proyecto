@@ -1,5 +1,7 @@
 angular.module('proyectoApp', ['ui.router']);
 var modulo = angular.module('proyectoApp');
+// var express = require('express');
+// var cors = require('cors');
 
 
 //define las rutas
@@ -12,7 +14,22 @@ modulo.config(function($stateProvider, $urlRouterProvider){
 		url:'/resultados?q',
 		templateUrl:'myTemplates/seccionResultados.html', controller:'ResultadosCtrl'
 	});
-
+	$stateProvider.state('registro',{
+		url:'/registro',
+		templateUrl:'myTemplates/seccionRegistro.html', controller:'ResgistroCtrl'
+	});
+	$stateProvider.state('ingresar',{
+		url:'/ingresar',
+		templateUrl:'myTemplates/seccionIngreso.html'/*, controller:'IngresoCtrl'*/
+	});
+	$stateProvider.state('recuperarPassword',{
+		url:'/recuperarPassword',
+		templateUrl:'myTemplates/seccionRecuperarPassword.html', controller:'RecuperarPasswordCtrl'
+	});
+	$stateProvider.state('misPublicaciones',{
+		url:'/misPublicaciones',
+		templateUrl:'myTemplates/seccionMisPublicaciones.html'
+	});
 	$urlRouterProvider.otherwise('/home'); //si no encuentra ruta va al /home o lo que pongas ahí (404)
 })
 
@@ -27,11 +44,7 @@ modulo.controller('HomeCtrl', function($scope, $state){
 	}
 })
 
-
-
-
-
-
+// le pega a la api y trae el resultado de la busqueda
 modulo.controller('ResultadosCtrl',function($stateParams,$scope,$http){
 	var url = 'https://api.mercadolibre.com/sites/MLA/search?q='+ $stateParams.q;
 
@@ -49,12 +62,21 @@ modulo.controller('ResultadosCtrl',function($stateParams,$scope,$http){
 	console.log(url)
 })
 
-
-
-// modulo.controller('MainCtrl',function($rootScope,$scope){
-// 	$rootScope.$on('$stateChangeStart', 
-// 	function(event, toState, toParams, fromState, fromParams){ 
-// 	    $scope.stateName = toState.name;
-// 	    console.log($scope.stateName)
-// 	})
-// })
+// recibe los datos del registro y los envia a la db
+modulo.controller('ResgistroCtrl', function($scope, $state, $http){
+	var myBase = 'http://localhost:3000/users'
+	
+	$scope.registro = function(){
+		var usuario = $scope.emailRegistro;
+		var clave = $scope.passwordRegistro;
+		var data = {
+			email: usuario,
+			password: clave
+		};
+			$http.post(myBase, data)
+		.then(function(respuestaDeMyBase){
+			console.log('se creo el usuario con exito', usuario)
+		})
+	}
+	
+})

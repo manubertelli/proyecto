@@ -1,0 +1,20 @@
+<!-- inicio de portada -->
+<section class="main">
+	<div class="registro">
+		<div>
+			<h1>Registrate</h1>
+		</div>
+		<div class="formulario">
+			<form ng-submit="registro()">
+				<label for="">Email</label>
+				<input type="email" ng-model= "emailRegistro" placeholder="tuemail@ejemplo.com" name="email" required="">
+				<label for="">Contraseña</label>
+				<input type="password" ng-model= "passwordRegistro" placeholder="tu contraseña" name="password" value="" required="">
+				<label for="">Repetir contraseña</label>
+				<input type="password" ng-model= "confirmPasswordRegistro" placeholder="repite tu contraseña" name="confirm" value="">
+				<button ng-click="registrarme()">Registrarme</button>
+			</form>
+		</div>
+	</div>
+</section>
+</section>
