@@ -64,11 +64,13 @@ modulo.controller('ResultadosCtrl',function($stateParams,$scope,$http){
 
 // recibe los datos del registro y los envia a la db
 modulo.controller('ResgistroCtrl', function($scope, $state, $http){
-	var myBase = 'http://localhost:3000/users'
+	var myBase = 'http://localhost:3041/users'
 	
-	$scope.registro = function(){
+	$scope.registrarme = function(){
 		var usuario = $scope.emailRegistro;
+		console.log('usuario: ',usuario);
 		var clave = $scope.passwordRegistro;
+		console.log('clave: ',clave);
 		var data = {
 			email: usuario,
 			password: clave

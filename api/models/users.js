@@ -1,10 +1,11 @@
 var m = require('mongoose');
 
 var schema = new m.Schema({
-	email:  String,
+	email: String,
 	password: String,
 	fullname: String,
-	active: Boolean
+	active: Boolean,
+	token: String
 	// reservations:[IDs],
 	// apartments:[IDs]
 });
