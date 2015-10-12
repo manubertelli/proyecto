@@ -16,38 +16,86 @@ m.connect(mongoUrl, function(err) {
     }
 })
 
+// mi perfil de usuario
+router.post('/me', function(req, res){
+    // console.log('ya estoy frito')
+    var userLogin = {
+        email: req.body.email,
+        password: req.body.password
+    };
+
+    usersModel.findOne(userLogin, function(err, user){
+        if (user){
+            console.log('ingreso!');
+            res.status(200).json(
+                user
+            );
+        }else{
+            console.log('no existis')
+            res.json({
+                error: 'la clave o usuario son incorrectos'
+            })
+        }
+    })
+})
 
 //	crea un nuevo user
 router.post('/', function(req, res) {
-    var newUser = new usersModel(req.body);
-    newUser.save(function(err) {
+
+    var email = {
+        email: req.body.email
+    };
+    // console.log(email);
+
+    usersModel.findOne(email, function(err, user) {
         if (err) {
+            //log with winston(check it in npm)
+        }
+
+        if (user) {
             res.status(400).json({
-                error: 'algo paso'
+                error: 'ya existe'
             })
         } else {
-            res.json(newUser);
+            req.body.active = true;
+            var newUser = new usersModel(req.body);
+            newUser.save(function(err) {
+                if (err) {
+                    res.status(400).json({
+                        error: 'algo paso'
+                    })
+                } else {
+                    
+                    // email de confirmación de registro
+                    var message = {
+                        "html": "Hola te has registrado correctamente!! Tu usuario es: " + newUser.email + " y tu clave: " + newUser.password,
+                        "subject": "Bienvenido",
+                        "from_email": "noreply@proysctoCoderHouse.com",
+                        "from_name": "Proyecto CoderHouse",
+                        "to": [{
+                            "email": newUser.email
+                        }]
+                    };
+
+                    mandrill_client.messages.send({
+                        "message": message
+                    }, function(result) {
+                        console.log('email result', result);
+                    }, function(e) {
+                        console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message)
+                    });
+                    res.status(200).json(
+                        newUser
+                    );
+                }
+            })  
         }
     })
-    // email de bienvenida
-    var message = {
-        "html": "Hola te has registrado correctamente!! Tu usuario es: "+newUser.email+" y tu clave: "+newUser.password,
-        "subject": "Bienvenido",
-        "from_email": "message.from_email@example.com",
-        "from_name": "Manu Bertelli",
-        "to": [{
-            "email": newUser.email
-        }]
-    };
-
-    mandrill_client.messages.send({
-        "message": message
-    }, function(result) {
-        console.log('email result', result);
-    }, function(e) {
-        console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message)
-    });
 })
+
+
+
+
 //	obtiene lista de users
 router.get('/', function(req, res) {
     usersModel.find(function(err, usersList) {

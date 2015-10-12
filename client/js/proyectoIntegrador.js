@@ -20,7 +20,7 @@ modulo.config(function($stateProvider, $urlRouterProvider){
 	});
 	$stateProvider.state('ingresar',{
 		url:'/ingresar',
-		templateUrl:'myTemplates/seccionIngreso.html'/*, controller:'IngresoCtrl'*/
+		templateUrl:'myTemplates/seccionIngreso.html', controller:'IngresoCtrl'
 	});
 	$stateProvider.state('recuperarPassword',{
 		url:'/recuperarPassword',
@@ -68,17 +68,36 @@ modulo.controller('ResgistroCtrl', function($scope, $state, $http){
 	
 	$scope.registrarme = function(){
 		var usuario = $scope.emailRegistro;
-		console.log('usuario: ',usuario);
+		// console.log('usuario: ',usuario);
 		var clave = $scope.passwordRegistro;
-		console.log('clave: ',clave);
+		// console.log('clave: ',clave);
 		var data = {
 			email: usuario,
 			password: clave
 		};
-			$http.post(myBase, data)
+		$http.post(myBase, data)
 		.then(function(respuestaDeMyBase){
-			console.log('se creo el usuario con exito', usuario)
+			console.log(respuestaDeMyBase);
+		},function(error){
+			alert(error.data.error);
+			console.log(error);
 		})
 	}
-	
+})
+
+// ingresa a tu usuario
+modulo.controller('IngresoCtrl', function($scope, $state, $http){
+	var myBase = 'http://localhost:3041/users/me'
+
+	$scope.ingresar = function(){
+		var usuario = $scope.emailRegistro;
+		var clave = $scope.passwordRegistro;
+		var data = {
+			email: usuario,
+			password: clave
+		};
+	$http.post(myBase, data)
+	.then(function(respuestaDeMyBase){
+	})
+	}
 })

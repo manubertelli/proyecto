@@ -65,3 +65,6 @@ router.delete('/', function(req, res){
 		})
 	}
 })
+
+// exporta router
+module.exports = router;
