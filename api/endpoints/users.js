@@ -17,7 +17,7 @@ m.connect(mongoUrl, function(err) {
 })
 
 // mi perfil de usuario
-router.post('/me', function(req, res){
+router.post('/', function(req, res){
     // console.log('ya estoy frito')
     var userLogin = {
         email: req.body.email,
@@ -28,11 +28,11 @@ router.post('/me', function(req, res){
         if (user){
             console.log('ingreso!');
             res.status(200).json(
-                user
+                user.email
             );
         }else{
-            console.log('no existis')
-            res.json({
+            console.log('no existis!')
+            res.status(400).json({
                 error: 'la clave o usuario son incorrectos'
             })
         }
